@@ -358,11 +358,17 @@ body {
         padding: 1rem;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
     }
 
     .navbar nav {
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
     }
 
     .navbar nav a {
@@ -451,11 +457,21 @@ body {
 @media (max-width: 480px) {
     .navbar {
         padding: 0.75rem;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
     }
 
     .logo img {
         height: 35px;
         width: 45px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
     }
 
     .navbar nav a {
