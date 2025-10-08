@@ -466,3 +466,7 @@ body {
     scrollbar-width: thin;
     scrollbar-color: red #161513;
 }
+
+.mariadb img {
+    height: 2000px;
+}
