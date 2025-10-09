@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - frearkdev.nl</title>
     <link rel="stylesheet" href="css/contact.css">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&family=Poppins:wght@300;600;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="assets/avatar.png" alt="avatar" class="avatar">
+        <h1>Let's <span>talk!</span></h1>
+        <p>
+            To request a quoute or want to meet up for coffee,
+            <br>contact me directly or fill out the form and i
+            <br>will get back to you soon.
+        </p>
+    </section>
+    <div class="contact-form">
+        <form id="name">
+            <label class="name" for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </form>
+    </div>
+
 </body>
+
 </html>
