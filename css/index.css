@@ -209,7 +209,7 @@ body {
 .section-title {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: clamp(24px, 4vw, 35px);
+    font-size: clamp(18px, 4vw, 26px);
     font-weight: 800;
     background: linear-gradient(90deg, red 40%, black 80%);
     -webkit-background-clip: text;
@@ -322,7 +322,7 @@ body {
 .education h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: clamp(24px, 4vw, 35px);
+    font-size: clamp(18px, 4vw, 26px);
     font-weight: 800;
     background: linear-gradient(90deg, red 40%, black 80%);
     -webkit-background-clip: text;
