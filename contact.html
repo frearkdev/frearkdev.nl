@@ -16,6 +16,11 @@
         <div class="logo">
             <img src="assets/logo.png" alt="Logo">
         </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#experience">Experience</a>
@@ -46,6 +51,33 @@
         </form>
     </div>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.navbar nav');
+        const navLinks = document.querySelectorAll('.navbar nav a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!document.querySelector('.navbar').contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 
 </html>

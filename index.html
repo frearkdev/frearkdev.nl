@@ -42,6 +42,11 @@
         <div class="logo">
             <img src="assets/logo.png" alt="Logo">
         </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#experience">Experience</a>
@@ -207,7 +212,6 @@
     </footer>
 
     <script>
-        // Sticky navbar functionality
         const navbar = document.querySelector('.navbar');
 
         window.addEventListener('scroll', () => {
@@ -215,6 +219,32 @@
                 navbar.classList.add('sticky');
             } else {
                 navbar.classList.remove('sticky');
+            }
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.navbar nav');
+        const navLinks = document.querySelectorAll('.navbar nav a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     </script>
