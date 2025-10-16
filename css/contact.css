@@ -131,7 +131,7 @@ input {
     margin-bottom: 20px;
     background-color: #222222;
     outline: none;
-    border-radius: 24px;
+    border-radius: 30px;
     width: 544px;
     height: 70px;
     color: white;
@@ -147,4 +147,18 @@ input {
 
 textarea:focus, input:focus{
     outline: none;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #C5C5C5;
+}
+
+.email {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #C5C5C5;
 }
