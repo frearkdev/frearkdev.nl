@@ -32,6 +32,15 @@ body {
     background: linear-gradient(180deg, #ff3333, red);
 }
 
+input {
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-appearance: none; /* removes default styling on Safari/iOS */
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
