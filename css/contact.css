@@ -33,6 +33,7 @@ body {
 }
 
 input {
+    position: center;
     border: none;
     outline: none;
     background: none;
@@ -42,6 +43,7 @@ input {
 }
 
 textarea {
+    position: center;
     border: none;
     outline: none;
     background: none;
