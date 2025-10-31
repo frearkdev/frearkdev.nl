@@ -38,6 +38,37 @@
 </head>
 
 <body>
+    <!-- Language Translator Widget -->
+    <div class="language-widget">
+        <div class="language-option" data-lang="fy">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Frisian_flag.svg/2560px-Frisian_flag.svg.png" alt="Frisian">
+            <span>Frysk</span>
+        </div>
+        <div class="language-option" data-lang="nl">
+            <img src="https://flagcdn.com/w40/nl.png" alt="Dutch">
+            <span>Nederlands</span>
+        </div>
+        <div class="language-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" alt="French">
+            <span>Français</span>
+        </div>
+        <div class="language-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" alt="German">
+            <span>Deutsch</span>
+        </div>
+        <div class="language-option" data-lang="it">
+            <img src="https://flagcdn.com/w40/it.png" alt="Italian">
+            <span>Italiano</span>
+        </div>
+        <div class="language-option active" data-lang="en">
+            <img src="https://flagcdn.com/w40/us.png" alt="English">
+            <span>EN</span>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
     <header class="navbar">
         <div class="logo">
             <img src="assets/logo.png" alt="Logo">
@@ -213,6 +244,192 @@
     </footer>
 
     <script>
+        // Translation data
+        const translations = {
+            en: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Experience',
+                    portfolio: 'Portfolio',
+                    education: 'Education',
+                    contact: 'Contact'
+                },
+                hero: {
+                    greeting: "Hi, I'm Freark!<br>I'm <span>16 years</span> old!",
+                    description: "Hi! I'm a 16-year-old software development student from the Netherlands,<br>currently in my first year of MBO4. I recently started my journey in coding<br>and I'm really excited about learning how to build websites, apps, and cool projects.<br>I enjoy experimenting, trying out new ideas, and improving a little bit every day. <br>This portfolio is where I'll share what I'm working on and how I'm growing as a developer.",
+                    contactBtn: 'Contact',
+                    cvBtn: 'Download CV'
+                },
+                sections: {
+                    experience: 'EXPERIENCE WITH',
+                    projects: 'PROJECTS',
+                    education: 'EDUCATION'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Aspiring Software Developer from the Netherlands, currently studying MBO4 and building a foundation in modern programming.<br>Passionate about exploring both front-end and back-end technologies,<br>with a strong curiosity for creating practical and creative web solutions while growing step by step as a developer."
+                }
+            },
+            fy: {
+                nav: {
+                    home: 'Thús',
+                    experience: 'Ûnderfining',
+                    portfolio: 'Portfolio',
+                    education: 'Underwiis',
+                    contact: 'Kontakt'
+                },
+                hero: {
+                    greeting: "Hoi, ik bin Freark!<br>Ik bin <span>16 jier</span> âld!",
+                    description: "Hoi! Ik bin in 16-jierrige softwareontwikkelings-studint út Nederlân,<br>op it stuit yn myn earste jier fan MBO4. Ik bin koartlyn begûn mei myn reis yn programmearjen<br>en ik bin echt entûsjast oer it learen bouwen fan websiden, apps en coole projekten.<br>Ik fyn it leuk om te eksperimentearjen, nije ideeën út te probearjen en elke dei in bytsje better te wurden. <br>Dit portfolio is wêr't ik diel wat ik doch en hoe't ik groei as ûntwikkelder.",
+                    contactBtn: 'Kontakt',
+                    cvBtn: 'Download CV'
+                },
+                sections: {
+                    experience: 'ÛNDERFINING MEI',
+                    projects: 'PROJEKTEN',
+                    education: 'UNDERWIIS'
+                },
+                footer: {
+                    title: 'Kontakt',
+                    description: "Aspiraant Software Developer út Nederlân, op it stuit MBO4-studint en it bouwen fan in basis yn moderne programmearjen.<br>Hertstochtlik oer it ferkennjen fan sawol front-end as back-end technology,<br>mei in sterke nijsgjirrigens foar it meitsjen fan praktyske en kreatyve weboplossings wylst ik stap foar stap groei as ûntwikkelder."
+                }
+            },
+            nl: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Ervaring',
+                    portfolio: 'Portfolio',
+                    education: 'Onderwijs',
+                    contact: 'Contact'
+                },
+                hero: {
+                    greeting: "Hoi, ik ben Freark!<br>Ik ben <span>16 jaar</span> oud!",
+                    description: "Hoi! Ik ben een 16-jarige softwareontwikkelings-student uit Nederland,<br>momenteel in mijn eerste jaar van MBO4. Ik ben recentelijk begonnen met mijn reis in programmeren<br>en ik ben echt enthousiast over het leren bouwen van websites, apps en coole projecten.<br>Ik vind het leuk om te experimenteren, nieuwe ideeën uit te proberen en elke dag een beetje te verbeteren. <br>Dit portfolio is waar ik deel wat ik doe en hoe ik groei als ontwikkelaar.",
+                    contactBtn: 'Contact',
+                    cvBtn: 'Download CV'
+                },
+                sections: {
+                    experience: 'ERVARING MET',
+                    projects: 'PROJECTEN',
+                    education: 'ONDERWIJS'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Aspirant Software Developer uit Nederland, momenteel MBO4 student en het bouwen van een basis in moderne programmering.<br>Gepassioneerd over het verkennen van zowel front-end als back-end technologieën,<br>met een sterke nieuwsgierigheid voor het creëren van praktische en creatieve weboplossingen terwijl ik stap voor stap groei als ontwikkelaar."
+                }
+            },
+            fr: {
+                nav: {
+                    home: 'Accueil',
+                    experience: 'Expérience',
+                    portfolio: 'Portfolio',
+                    education: 'Éducation',
+                    contact: 'Contact'
+                },
+                hero: {
+                    greeting: "Salut, je suis Freark!<br>J'ai <span>16 ans</span>!",
+                    description: "Salut! Je suis un étudiant en développement logiciel de 16 ans des Pays-Bas,<br>actuellement en première année de MBO4. J'ai récemment commencé mon parcours en codage<br>et je suis vraiment enthousiaste à l'idée d'apprendre à créer des sites web, des applications et des projets intéressants.<br>J'aime expérimenter, essayer de nouvelles idées et m'améliorer chaque jour. <br>Ce portfolio est l'endroit où je partagerai ce sur quoi je travaille et comment je grandis en tant que développeur.",
+                    contactBtn: 'Contact',
+                    cvBtn: 'Télécharger CV'
+                },
+                sections: {
+                    experience: 'EXPÉRIENCE AVEC',
+                    projects: 'PROJETS',
+                    education: 'ÉDUCATION'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Développeur logiciel en herbe des Pays-Bas, étudiant actuellement en MBO4 et construisant une base en programmation moderne.<br>Passionné par l'exploration des technologies front-end et back-end,<br>avec une forte curiosité pour créer des solutions web pratiques et créatives tout en grandissant étape par étape en tant que développeur."
+                }
+            },
+            de: {
+                nav: {
+                    home: 'Startseite',
+                    experience: 'Erfahrung',
+                    portfolio: 'Portfolio',
+                    education: 'Bildung',
+                    contact: 'Kontakt'
+                },
+                hero: {
+                    greeting: "Hallo, ich bin Freark!<br>Ich bin <span>16 Jahre</span> alt!",
+                    description: "Hallo! Ich bin ein 16-jähriger Softwareentwicklungs-Student aus den Niederlanden,<br>derzeit im ersten Jahr von MBO4. Ich habe kürzlich meine Reise in der Programmierung begonnen<br>und bin wirklich begeistert davon, zu lernen, wie man Websites, Apps und coole Projekte erstellt.<br>Ich experimentiere gerne, probiere neue Ideen aus und verbessere mich jeden Tag ein bisschen. <br>Dieses Portfolio ist der Ort, an dem ich teilen werde, woran ich arbeite und wie ich als Entwickler wachse.",
+                    contactBtn: 'Kontakt',
+                    cvBtn: 'Lebenslauf herunterladen'
+                },
+                sections: {
+                    experience: 'ERFAHRUNG MIT',
+                    projects: 'PROJEKTE',
+                    education: 'BILDUNG'
+                },
+                footer: {
+                    title: 'Kontakt',
+                    description: "Aufstrebender Softwareentwickler aus den Niederlanden, derzeit MBO4-Student und Aufbau einer Grundlage in moderner Programmierung.<br>Leidenschaftlich an der Erkundung von Front-End- und Back-End-Technologien interessiert,<br>mit einer starken Neugier für die Erstellung praktischer und kreativer Weblösungen, während ich Schritt für Schritt als Entwickler wachse."
+                }
+            },
+            it: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Esperienza',
+                    portfolio: 'Portfolio',
+                    education: 'Istruzione',
+                    contact: 'Contatto'
+                },
+                hero: {
+                    greeting: "Ciao, sono Freark!<br>Ho <span>16 anni</span>!",
+                    description: "Ciao! Sono uno studente di sviluppo software di 16 anni dei Paesi Bassi,<br>attualmente al primo anno di MBO4. Ho recentemente iniziato il mio viaggio nella programmazione<br>e sono davvero entusiasta di imparare a creare siti web, app e progetti interessanti.<br>Mi piace sperimentare, provare nuove idee e migliorare un po' ogni giorno. <br>Questo portfolio è dove condividerò su cosa sto lavorando e come sto crescendo come sviluppatore.",
+                    contactBtn: 'Contatto',
+                    cvBtn: 'Scarica CV'
+                },
+                sections: {
+                    experience: 'ESPERIENZA CON',
+                    projects: 'PROGETTI',
+                    education: 'ISTRUZIONE'
+                },
+                footer: {
+                    title: 'Contatto',
+                    description: "Aspirante sviluppatore software dei Paesi Bassi, attualmente studente MBO4 e costruzione di una base nella programmazione moderna.<br>Appassionato di esplorazione di tecnologie front-end e back-end,<br>con una forte curiosità per creare soluzioni web pratiche e creative mentre cresco passo dopo passo come sviluppatore."
+                }
+            }
+        };
+
+        // Function to translate page
+        function translatePage(lang) {
+            const t = translations[lang];
+            
+            // Update navigation
+            document.querySelectorAll('.navbar nav a').forEach((link, index) => {
+                const keys = ['home', 'experience', 'portfolio', 'education', 'contact'];
+                if (keys[index]) link.textContent = t.nav[keys[index]];
+            });
+            
+            // Update hero section
+            document.querySelector('.hero h1').innerHTML = t.hero.greeting;
+            document.querySelector('.hero p').innerHTML = t.hero.description;
+            document.querySelectorAll('.btn')[0].textContent = t.hero.contactBtn;
+            document.querySelectorAll('.btn')[1].textContent = t.hero.cvBtn;
+            
+            // Update sections
+            document.querySelector('.skills h2').textContent = t.sections.experience;
+            document.querySelector('.section-title').textContent = t.sections.projects;
+            document.querySelector('.education h2').textContent = t.sections.education;
+            
+            // Update footer
+            document.querySelector('.footer h2').textContent = t.footer.title;
+            document.querySelector('.footer-description').innerHTML = t.footer.description;
+            
+            // Store language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        if (savedLang !== 'en') {
+            translatePage(savedLang);
+            // Update active language in widget
+            document.querySelector('.language-option.active').classList.remove('active');
+            document.querySelector(`[data-lang="${savedLang}"]`).classList.add('active');
+        }
+
         const navbar = document.querySelector('.navbar');
 
         window.addEventListener('scroll', () => {
@@ -242,10 +459,37 @@
         });
 
         document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target)) {
+            const languageWidget = document.querySelector('.language-widget');
+            if (!navbar.contains(e.target) && !languageWidget.contains(e.target)) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
                 document.body.style.overflow = '';
+                languageWidget.classList.remove('expanded');
+            }
+        });
+
+        // Language translator functionality
+        const languageWidget = document.querySelector('.language-widget');
+        const languageOptions = document.querySelectorAll('.language-option');
+
+        // Add click handler to toggle expansion when clicking the widget
+        languageWidget.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const clickedOption = e.target.closest('.language-option');
+            
+            if (clickedOption) {
+                const lang = clickedOption.dataset.lang;
+                
+                if (clickedOption.classList.contains('active')) {
+                    // Clicking active language toggles the widget
+                    languageWidget.classList.toggle('expanded');
+                } else {
+                    // Clicking inactive language translates and closes
+                    translatePage(lang);
+                    document.querySelector('.language-option.active').classList.remove('active');
+                    clickedOption.classList.add('active');
+                    languageWidget.classList.remove('expanded');
+                }
             }
         });
     </script>

@@ -12,6 +12,37 @@
 </head>
 
 <body>
+    <!-- Language Translator Widget -->
+    <div class="language-widget">
+        <div class="language-option" data-lang="fy">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Frisian_flag.svg/2560px-Frisian_flag.svg.png" alt="Frisian">
+            <span>Frysk</span>
+        </div>
+        <div class="language-option" data-lang="nl">
+            <img src="https://flagcdn.com/w40/nl.png" alt="Dutch">
+            <span>Nederlands</span>
+        </div>
+        <div class="language-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" alt="French">
+            <span>Français</span>
+        </div>
+        <div class="language-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" alt="German">
+            <span>Deutsch</span>
+        </div>
+        <div class="language-option" data-lang="it">
+            <img src="https://flagcdn.com/w40/it.png" alt="Italian">
+            <span>Italiano</span>
+        </div>
+        <div class="language-option active" data-lang="en">
+            <img src="https://flagcdn.com/w40/us.png" alt="English">
+            <span>EN</span>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
     <header class="navbar">
         <div class="logo">
             <img src="assets/logo.png" alt="Logo">
@@ -94,6 +125,192 @@
     </footer>
 
     <script>
+        // Translation data for contact page
+        const translations = {
+            en: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Experience',
+                    portfolio: 'Portfolio',
+                    education: 'Education',
+                    contact: 'Contact'
+                },
+                hero: {
+                    title: "Let's <span>talk!</span>",
+                    description: "To request a quoute or want to meet up for coffee,<br>contact me directly or fill out the form and I<br>will get back to you soon."
+                },
+                form: {
+                    name: 'Your Name',
+                    email: 'Your Email',
+                    message: 'Your Message',
+                    placeholder: 'Type your message here...',
+                    submit: 'SEND MESSAGE'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Aspiring Software Developer from the Netherlands, currently studying MBO4 and building a foundation in modern programming.<br>Passionate about exploring both front-end and back-end technologies,<br>with a strong curiosity for creating practical and creative web solutions while growing step by step as a developer."
+                }
+            },
+            fy: {
+                nav: {
+                    home: 'Thús',
+                    experience: 'Ûnderfining',
+                    portfolio: 'Portfolio',
+                    education: 'Underwiis',
+                    contact: 'Kontakt'
+                },
+                hero: {
+                    title: "Litte wy <span>prate!</span>",
+                    description: "Om in oanfraach te dwaan of ôfspreke foar kofje,<br>nim direkt kontakt mei my op of folje it formulier yn en ik<br>nim ynkoarten kontakt mei dy op."
+                },
+                form: {
+                    name: 'Dyn Namme',
+                    email: 'Dyn E-mail',
+                    message: 'Dyn Berjocht',
+                    placeholder: 'Typ hjir dyn berjocht...',
+                    submit: 'FERSTJOER BERJOCHT'
+                },
+                footer: {
+                    title: 'Kontakt',
+                    description: "Aspiraant Software Developer út Nederlân, op it stuit MBO4-studint en it bouwen fan in basis yn moderne programmearjen.<br>Hertstochtlik oer it ferkennjen fan sawol front-end as back-end technology,<br>mei in sterke nijsgjirrigens foar it meitsjen fan praktyske en kreatyve weboplossings wylst ik stap foar stap groei as ûntwikkelder."
+                }
+            },
+            nl: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Ervaring',
+                    portfolio: 'Portfolio',
+                    education: 'Onderwijs',
+                    contact: 'Contact'
+                },
+                hero: {
+                    title: "Laten we <span>praten!</span>",
+                    description: "Om een offerte aan te vragen of af te spreken voor een koffie,<br>neem direct contact met me op of vul het formulier in en ik<br>neem binnenkort contact met je op."
+                },
+                form: {
+                    name: 'Jouw Naam',
+                    email: 'Jouw Email',
+                    message: 'Jouw Bericht',
+                    placeholder: 'Typ hier je bericht...',
+                    submit: 'VERSTUUR BERICHT'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Aspirant Software Developer uit Nederland, momenteel MBO4 student en het bouwen van een basis in moderne programmering.<br>Gepassioneerd over het verkennen van zowel front-end als back-end technologieën,<br>met een sterke nieuwsgierigheid voor het creëren van praktische en creatieve weboplossingen terwijl ik stap voor stap groei als ontwikkelaar."
+                }
+            },
+            fr: {
+                nav: {
+                    home: 'Accueil',
+                    experience: 'Expérience',
+                    portfolio: 'Portfolio',
+                    education: 'Éducation',
+                    contact: 'Contact'
+                },
+                hero: {
+                    title: "Parlons-<span>en!</span>",
+                    description: "Pour demander un devis ou pour un café,<br>contactez-moi directement ou remplissez le formulaire et je<br>vous répondrai bientôt."
+                },
+                form: {
+                    name: 'Votre nom',
+                    email: 'Votre email',
+                    message: 'Votre message',
+                    placeholder: 'Tapez votre message ici...',
+                    submit: 'ENVOYER LE MESSAGE'
+                },
+                footer: {
+                    title: 'Contact',
+                    description: "Développeur logiciel en herbe des Pays-Bas, étudiant actuellement en MBO4 et construisant une base en programmation moderne.<br>Passionné par l'exploration des technologies front-end et back-end,<br>avec une forte curiosité pour créer des solutions web pratiques et créatives tout en grandissant étape par étape en tant que développeur."
+                }
+            },
+            de: {
+                nav: {
+                    home: 'Startseite',
+                    experience: 'Erfahrung',
+                    portfolio: 'Portfolio',
+                    education: 'Bildung',
+                    contact: 'Kontakt'
+                },
+                hero: {
+                    title: "Lass uns <span>reden!</span>",
+                    description: "Um ein Angebot anzufordern oder sich auf einen Kaffee zu treffen,<br>kontaktieren Sie mich direkt oder füllen Sie das Formular aus und ich<br>melde mich bald bei Ihnen."
+                },
+                form: {
+                    name: 'Ihr Name',
+                    email: 'Ihre E-Mail',
+                    message: 'Ihre Nachricht',
+                    placeholder: 'Geben Sie hier Ihre Nachricht ein...',
+                    submit: 'NACHRICHT SENDEN'
+                },
+                footer: {
+                    title: 'Kontakt',
+                    description: "Aufstrebender Softwareentwickler aus den Niederlanden, derzeit MBO4-Student und Aufbau einer Grundlage in moderner Programmierung.<br>Leidenschaftlich an der Erkundung von Front-End- und Back-End-Technologien interessiert,<br>mit einer starken Neugier für die Erstellung praktischer und kreativer Weblösungen, während ich Schritt für Schritt als Entwickler wachse."
+                }
+            },
+            it: {
+                nav: {
+                    home: 'Home',
+                    experience: 'Esperienza',
+                    portfolio: 'Portfolio',
+                    education: 'Istruzione',
+                    contact: 'Contatto'
+                },
+                hero: {
+                    title: "Parliamo-<span>ne!</span>",
+                    description: "Per richiedere un preventivo o incontrarsi per un caffè,<br>contattami direttamente o compila il modulo e ti<br>risponderò presto."
+                },
+                form: {
+                    name: 'Il tuo nome',
+                    email: 'La tua email',
+                    message: 'Il tuo messaggio',
+                    placeholder: 'Scrivi qui il tuo messaggio...',
+                    submit: 'INVIA MESSAGGIO'
+                },
+                footer: {
+                    title: 'Contatto',
+                    description: "Aspirante sviluppatore software dei Paesi Bassi, attualmente studente MBO4 e costruzione di una base nella programmazione moderna.<br>Appassionato di esplorazione di tecnologie front-end e back-end,<br>con una forte curiosità per creare soluzioni web pratiche e creative mentre cresco passo dopo passo come sviluppatore."
+                }
+            }
+        };
+
+        // Function to translate page
+        function translatePage(lang) {
+            const t = translations[lang];
+            
+            // Update navigation
+            document.querySelectorAll('.navbar nav a').forEach((link, index) => {
+                const keys = ['home', 'experience', 'portfolio', 'education', 'contact'];
+                if (keys[index]) link.textContent = t.nav[keys[index]];
+            });
+            
+            // Update hero section
+            document.querySelector('.hero h1').innerHTML = t.hero.title;
+            document.querySelector('.hero p').innerHTML = t.hero.description;
+            
+            // Update form labels
+            document.querySelector('.name').textContent = t.form.name;
+            document.querySelector('.email').textContent = t.form.email;
+            document.querySelector('.message-label').textContent = t.form.message;
+            document.querySelector('.messagearea').placeholder = t.form.placeholder;
+            document.querySelector('.submit-btn').textContent = t.form.submit;
+            
+            // Update footer
+            document.querySelector('.footer h2').textContent = t.footer.title;
+            document.querySelector('.footer-description').innerHTML = t.footer.description;
+            
+            // Store language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        if (savedLang !== 'en') {
+            translatePage(savedLang);
+            // Update active language in widget
+            document.querySelector('.language-option.active').classList.remove('active');
+            document.querySelector(`[data-lang="${savedLang}"]`).classList.add('active');
+        }
+
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('.navbar nav');
         const navLinks = document.querySelectorAll('.navbar nav a');
@@ -113,10 +330,36 @@
         });
 
         document.addEventListener('click', (e) => {
-            if (!document.querySelector('.navbar').contains(e.target)) {
+            const languageWidget = document.querySelector('.language-widget');
+            if (!document.querySelector('.navbar').contains(e.target) && !languageWidget.contains(e.target)) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
                 document.body.style.overflow = '';
+                languageWidget.classList.remove('expanded');
+            }
+        });
+
+        // Language translator functionality
+        const languageWidget = document.querySelector('.language-widget');
+
+        // Add click handler to toggle expansion when clicking the widget
+        languageWidget.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const clickedOption = e.target.closest('.language-option');
+            
+            if (clickedOption) {
+                const lang = clickedOption.dataset.lang;
+                
+                if (clickedOption.classList.contains('active')) {
+                    // Clicking active language toggles the widget
+                    languageWidget.classList.toggle('expanded');
+                } else {
+                    // Clicking inactive language translates and closes
+                    translatePage(lang);
+                    document.querySelector('.language-option.active').classList.remove('active');
+                    clickedOption.classList.add('active');
+                    languageWidget.classList.remove('expanded');
+                }
             }
         });
     </script>
