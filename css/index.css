@@ -118,7 +118,7 @@ body {
 }
 
 .hero h1 span {
-    background: linear-gradient(90deg, red 40%, black 80%);
+    background: linear-gradient(90deg, red 80%, black 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -474,7 +474,9 @@ body {
 
 ::-webkit-scrollbar {
     width: 12px;
+    scroll-behavior: smooth;
 }
+
 
 ::-webkit-scrollbar-track {
     background: #161513;
