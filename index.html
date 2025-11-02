@@ -38,7 +38,6 @@
 </head>
 
 <body>
-    <!-- Language Translator Widget -->
     <div class="language-widget">
         <div class="language-option" data-lang="fy">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Frisian_flag.svg/2560px-Frisian_flag.svg.png" alt="Frisian">
@@ -244,7 +243,7 @@
     </footer>
 
     <script>
-        // Translation data
+
         const translations = {
             en: {
                 nav: {
@@ -392,40 +391,32 @@
             }
         };
 
-        // Function to translate page
         function translatePage(lang) {
             const t = translations[lang];
             
-            // Update navigation
             document.querySelectorAll('.navbar nav a').forEach((link, index) => {
                 const keys = ['home', 'experience', 'portfolio', 'education', 'contact'];
                 if (keys[index]) link.textContent = t.nav[keys[index]];
             });
             
-            // Update hero section
             document.querySelector('.hero h1').innerHTML = t.hero.greeting;
             document.querySelector('.hero p').innerHTML = t.hero.description;
             document.querySelectorAll('.btn')[0].textContent = t.hero.contactBtn;
             document.querySelectorAll('.btn')[1].textContent = t.hero.cvBtn;
             
-            // Update sections
             document.querySelector('.skills h2').textContent = t.sections.experience;
             document.querySelector('.section-title').textContent = t.sections.projects;
             document.querySelector('.education h2').textContent = t.sections.education;
             
-            // Update footer
             document.querySelector('.footer h2').textContent = t.footer.title;
             document.querySelector('.footer-description').innerHTML = t.footer.description;
             
-            // Store language preference
             localStorage.setItem('preferredLanguage', lang);
         }
 
-        // Check for saved language preference
         const savedLang = localStorage.getItem('preferredLanguage') || 'en';
         if (savedLang !== 'en') {
             translatePage(savedLang);
-            // Update active language in widget
             document.querySelector('.language-option.active').classList.remove('active');
             document.querySelector(`[data-lang="${savedLang}"]`).classList.add('active');
         }
@@ -468,11 +459,9 @@
             }
         });
 
-        // Language translator functionality
         const languageWidget = document.querySelector('.language-widget');
         const languageOptions = document.querySelectorAll('.language-option');
 
-        // Add click handler to toggle expansion when clicking the widget
         languageWidget.addEventListener('click', (e) => {
             e.stopPropagation();
             const clickedOption = e.target.closest('.language-option');
@@ -481,10 +470,8 @@
                 const lang = clickedOption.dataset.lang;
                 
                 if (clickedOption.classList.contains('active')) {
-                    // Clicking active language toggles the widget
                     languageWidget.classList.toggle('expanded');
                 } else {
-                    // Clicking inactive language translates and closes
                     translatePage(lang);
                     document.querySelector('.language-option.active').classList.remove('active');
                     clickedOption.classList.add('active');
