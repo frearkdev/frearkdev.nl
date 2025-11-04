@@ -259,7 +259,6 @@ body {
     width: clamp(50px, 10vw, 70px);
     margin: 2rem 1rem;
     transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
 }
 
 .skills .icons img:hover {
@@ -407,7 +406,6 @@ body {
     margin-bottom: 50px;
     padding: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
 }
 
 .edu-item:hover {
